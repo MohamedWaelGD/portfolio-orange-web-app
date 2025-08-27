@@ -119,7 +119,7 @@ const Hero = () => {
           ref={pattern}
           src={"/images/pattern-orange.webp"}
           alt={"pattern-hero"}
-          className={"absolute top-0 left-0 scale-125"}
+          className={"absolute top-0 left-0 scale-50 md:scale-125"}
         />
         <p ref={iamText} className={"text-2xl"}>
           Hi I am
@@ -148,7 +148,7 @@ const Hero = () => {
         <div
           ref={experienceContainer}
           className={
-            "bg-fade-dark flex items-center gap-7 rounded-lg p-6 text-2xl font-bold"
+            "bg-fade-dark flex items-center gap-7 rounded-lg p-3 text-lg font-bold md:p-6 md:text-2xl"
           }
         >
           <div className={"border-r pr-4"}>

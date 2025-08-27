@@ -44,13 +44,45 @@ const Navbar = () => {
       <div
         className={"container mx-auto flex items-center justify-between p-4"}
       >
+        <button className={"block md:hidden"}>
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 12.5H3"
+              stroke="#959595"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M21 6.5H3"
+              stroke="#959595"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M21 18.5H3"
+              stroke="#959595"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
         <h1 ref={logoRef} className={"font-k2d logo text-3xl font-bold"}>
           <a href="#">LOGO</a>
         </h1>
         <ul
           ref={navLinksContainerRef}
           className={
-            "*:text-gray *:font-k2d flex items-center justify-center gap-8 font-bold"
+            "*:text-gray *:font-k2d hidden items-center justify-center gap-8 font-bold md:flex"
           }
         >
           <li className={"text-primary!"}>

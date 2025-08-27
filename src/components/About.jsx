@@ -259,7 +259,9 @@ const About = () => {
       </div>
       <div
         ref={skillsContainer}
-        className={"mt-16 flex flex-wrap justify-center gap-30 text-xl"}
+        className={
+          "lg: mt-16 grid grid-cols-2 justify-center gap-30 text-xl lg:grid-cols-5"
+        }
       >
         {skills.map((skill, i) => (
           <div key={i} className="text-center">
