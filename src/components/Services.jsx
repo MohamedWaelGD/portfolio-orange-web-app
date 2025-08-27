@@ -59,9 +59,10 @@ const Services = () => {
         ref={gridContainer}
         className={"grid grid-cols-1 gap-10 md:grid-cols-3"}
       >
-        {new Array(6).fill(0).map(() => {
+        {new Array(6).fill(0).map((_, i) => {
           return (
             <div
+              key={i}
               className={
                 "bg-fade-dark flex flex-col items-center gap-2 rounded-lg p-9"
               }
