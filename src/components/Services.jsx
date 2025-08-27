@@ -9,7 +9,6 @@ const Services = () => {
   const gridContainer = useRef(null);
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".services",

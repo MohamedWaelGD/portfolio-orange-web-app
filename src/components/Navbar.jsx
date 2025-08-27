@@ -9,6 +9,7 @@ const Navbar = () => {
   const hireRef = useRef(null);
 
   useGSAP(() => {
+    if (!gsap) return;
     const tl = gsap.timeline();
     tl.from(logoRef.current, {
       y: -100,
