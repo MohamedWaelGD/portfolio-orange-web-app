@@ -110,9 +110,7 @@ const Hero = () => {
 
   return (
     <section
-      className={
-        "container mx-auto flex flex-col items-center justify-between gap-4 p-4 md:flex-row"
-      }
+      className={"container mx-auto grid grid-cols-1 gap-4 p-4 md:grid-cols-2"}
     >
       <div className={"relative flex flex-col gap-4"}>
         <img
