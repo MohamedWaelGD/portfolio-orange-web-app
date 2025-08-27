@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { UsersRound } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "../lib/gsap.ts";
 import { useGSAP } from "@gsap/react";
 
 const Services = () => {

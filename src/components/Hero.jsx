@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Dribbble, Instagram, Linkedin } from "lucide-react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { gsap } from "../lib/gsap.ts";
 
 const Hero = () => {
   const iamText = useRef(null);
@@ -186,6 +186,8 @@ const Hero = () => {
           src="/images/hero-person.webp"
           alt={"hero-person"}
           className={"grayscale-100"}
+          fetchPriority={"high"}
+          decoding={"async"}
         />
       </div>
     </section>

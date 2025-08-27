@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import { DownloadIcon, Figma } from "lucide-react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CircularProgress from "./CircularProgress.jsx";
+import { gsap } from "../lib/gsap.ts";
 
 const skills = [
   {
@@ -133,7 +132,6 @@ const About = () => {
   const skillsContainer = useRef(null);
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about-me",
