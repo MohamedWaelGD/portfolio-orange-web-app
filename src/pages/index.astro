@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import About from "../components/About";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+  <Fragment slot="head">
+    <meta name="description" content="This is the homepage of my Astro website." />
+    <meta name="keywords" content="Astro, Website, Demo" />
+    <meta name="author" content="Mohamed Wael" />
+  </Fragment>
   <main class="flex flex-col gap-20">
   <Hero client:load />
   <Services client:visible />
