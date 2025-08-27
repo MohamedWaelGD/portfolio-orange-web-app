@@ -44,7 +44,7 @@ const Navbar = () => {
       <div
         className={"container mx-auto flex items-center justify-between p-4"}
       >
-        <button className={"block md:hidden"}>
+        <button className={"block md:hidden"} aria-label={"menu"}>
           <svg
             width="24"
             height="25"

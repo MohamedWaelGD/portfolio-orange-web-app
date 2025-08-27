@@ -25,7 +25,7 @@
     }
 
     .btn {
-        @apply px-10 py-3 rounded-lg font-bold
+        @apply px-10 py-3 rounded-lg font-bold text-lg
     }
 
     .btn-primary {

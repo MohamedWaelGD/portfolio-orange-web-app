@@ -131,13 +131,22 @@ const Hero = () => {
           UI/UX designer
         </p>
         <div ref={linksListContainer} className={"mb-4 flex gap-5"}>
-          <button className={"btn btn-circle btn-outline"}>
+          <button
+            className={"btn btn-circle btn-outline"}
+            aria-label={"instagram"}
+          >
             <Instagram />
           </button>
-          <button className={"btn btn-circle btn-outline"}>
+          <button
+            className={"btn btn-circle btn-outline"}
+            aria-label={"linkedin"}
+          >
             <Linkedin />
           </button>
-          <button className={"btn btn-circle btn-outline"}>
+          <button
+            className={"btn btn-circle btn-outline"}
+            aria-label={"dribbble"}
+          >
             <Dribbble />
           </button>
         </div>
