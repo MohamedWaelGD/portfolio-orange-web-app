@@ -1,0 +1,28 @@
+---
+---
+
+<div id="loading-screen" class="fixed inset-0 bg-dark flex items-center justify-center z-50">
+  <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+</div>
+
+<style>
+  #loading-screen {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+</style>
+
+<script>
+  if (window) {
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading-screen");
+      if (loader) {
+        loader.classList.add("hidden");
+        setTimeout(() => loader.remove(), 500); // remove after transition
+      }
+    });
+  }
+</script>
