@@ -19,7 +19,7 @@ const Hero = () => {
 
     const tl = gsap.timeline();
     tl.from(iamText.current, {
-      x: -100,
+      x: -20,
       opacity: 0,
       duration: 1,
       ease: "power2.out",
@@ -27,7 +27,7 @@ const Hero = () => {
     tl.from(
       authorText.current,
       {
-        x: -100,
+        x: -20,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
@@ -37,7 +37,7 @@ const Hero = () => {
     tl.from(
       roleText.current,
       {
-        x: -100,
+        x: -20,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
@@ -47,7 +47,7 @@ const Hero = () => {
     tl.from(
       linksListContainer.current.querySelectorAll("button"),
       {
-        x: -100,
+        x: -20,
         opacity: 0,
         duration: 1,
         stagger: 0.15,
@@ -59,7 +59,7 @@ const Hero = () => {
     tl.from(
       buttonsListContainer.current.querySelectorAll("button"),
       {
-        y: 100,
+        y: 20,
         opacity: 0,
         duration: 1,
         stagger: 0.15,
@@ -70,7 +70,7 @@ const Hero = () => {
     tl.from(
       experienceContainer.current,
       {
-        y: 100,
+        y: 20,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
@@ -80,7 +80,7 @@ const Hero = () => {
     tl.from(
       avatarImg.current,
       {
-        x: 500,
+        x: 20,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
@@ -118,8 +118,13 @@ const Hero = () => {
         <img
           ref={pattern}
           src={"/images/pattern-orange.webp"}
+          srcSet={
+            "/images/pattern-orange-sm.webp 400w, /images/pattern-orange.webp 800w"
+          }
           alt={"pattern-hero"}
-          className={"absolute top-0 left-0 scale-50 md:scale-125"}
+          className={
+            "absolute top-0 left-0 h-[355px] w-[380px] scale-50 md:scale-125 xl:h-[515px] xl:w-[600px]"
+          }
         />
         <p ref={iamText} className={"text-2xl"}>
           Hi I am
@@ -184,10 +189,16 @@ const Hero = () => {
         <img
           ref={avatarImg}
           src="/images/hero-person.webp"
+          srcSet={
+            "/images/hero-person-sm.webp 400w, /images/hero-person.webp 800w"
+          }
           alt={"hero-person"}
-          className={"grayscale-100"}
+          className={
+            "h-[480px] w-[320px] object-cover grayscale-100 xl:h-[780px] xl:w-[520px]"
+          }
           fetchPriority={"high"}
           decoding={"async"}
+          loading="eager"
         />
       </div>
     </section>
