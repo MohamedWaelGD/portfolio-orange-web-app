@@ -15,9 +15,9 @@ import ContactMe from "../components/ContactMe";
   </Fragment>
   <main class="flex flex-col gap-20 overflow-x-hidden">
     <Hero client:load />
-    <Services client:idle />
-    <About client:idle />
-    <Portfolio client:idle/>
-    <ContactMe client:idle/>
+    <Services client:visible />
+    <About client:visible />
+    <Portfolio client:visible/>
+    <ContactMe client:visible/>
   </main>
 </Layout>
