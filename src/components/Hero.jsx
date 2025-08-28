@@ -15,6 +15,8 @@ const Hero = () => {
   const pattern = useRef(null);
 
   useGSAP(() => {
+    if (!gsap) return;
+
     const tl = gsap.timeline();
     tl.from(iamText.current, {
       x: -100,
@@ -155,7 +157,7 @@ const Hero = () => {
         <div
           ref={experienceContainer}
           className={
-            "bg-fade-dark flex items-center gap-7 rounded-lg p-3 text-lg font-bold md:p-6 md:text-2xl"
+            "bg-fade-dark flex w-fit items-center gap-7 rounded-lg p-3 text-lg font-bold md:p-6 md:text-2xl"
           }
         >
           <div className={"border-r pr-4"}>
@@ -172,7 +174,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className={"relative"}>
+      <div className={"relative flex items-center justify-center"}>
         <div
           ref={avatarCircleImg}
           className={

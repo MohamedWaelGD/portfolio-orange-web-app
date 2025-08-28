@@ -132,6 +132,8 @@ const About = () => {
   const skillsContainer = useRef(null);
 
   useGSAP(() => {
+    if (!gsap) return;
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about-me",
@@ -203,7 +205,10 @@ const About = () => {
     });
   });
   return (
-    <section className={"about-me container mx-auto p-4 text-center"}>
+    <section
+      id={"about_me"}
+      className={"about-me container mx-auto p-4 text-center"}
+    >
       <h2 ref={headerText} className={"mb-2 text-4xl font-bold text-white"}>
         About Me
       </h2>
@@ -215,7 +220,7 @@ const About = () => {
           <div
             ref={avatarCircleImg}
             className={
-              "bg-fade-dark rounded-b-1xl absolute top-1/2 h-full w-2/3 -translate-y-1/2 rounded-t-full"
+              "bg-fade-dark rounded-b-1xl absolute top-1/2 h-full w-full -translate-y-1/2 rounded-t-full md:w-2/3"
             }
           ></div>
           <img
@@ -258,7 +263,7 @@ const About = () => {
       <div
         ref={skillsContainer}
         className={
-          "lg: mt-16 grid grid-cols-2 justify-center gap-30 text-xl lg:grid-cols-5"
+          "lg: mt-16 grid grid-cols-2 justify-center gap-14 text-xl md:gap-30 lg:grid-cols-5"
         }
       >
         {skills.map((skill, i) => (

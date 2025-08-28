@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import About from "../components/About";
+import Portfolio from "../components/Portfolio";
+import ContactMe from "../components/ContactMe";
 ---
 
 <Layout>
@@ -11,10 +13,11 @@ import About from "../components/About";
     <meta name="keywords" content="Astro, Website, Demo" />
     <meta name="author" content="Mohamed Wael" />
   </Fragment>
-  <main class="flex flex-col gap-20">
-  <Hero client:load />
-  <Services client:visible />
-  <About client:visible />
-
+  <main class="flex flex-col gap-20 overflow-x-hidden">
+    <Hero client:load />
+    <Services client:visible />
+    <About client:visible />
+    <Portfolio client:visible/>
+    <ContactMe client:visible/>
   </main>
 </Layout>

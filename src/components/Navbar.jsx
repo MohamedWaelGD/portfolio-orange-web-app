@@ -90,16 +90,16 @@ const Navbar = () => {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="#">About me</a>
+            <a href="#about_me">About me</a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#">Contact me</a>
+            <a href="#contact_me">Contact me</a>
           </li>
         </ul>
         <button ref={hireRef} className={"btn btn-primary"}>

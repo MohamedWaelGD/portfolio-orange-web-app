@@ -9,6 +9,7 @@ const Services = () => {
   const gridContainer = useRef(null);
 
   useGSAP(() => {
+    if (!gsap) return;
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".services",
@@ -45,7 +46,10 @@ const Services = () => {
     );
   });
   return (
-    <section className={"services container mx-auto p-4 text-center"}>
+    <section
+      id={"services"}
+      className={"services container mx-auto p-4 text-center"}
+    >
       <h2 ref={headerText} className={"mb-2 text-4xl font-bold text-white"}>
         Services
       </h2>
